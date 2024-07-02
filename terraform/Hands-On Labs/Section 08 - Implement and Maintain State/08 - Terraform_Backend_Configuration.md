@@ -86,7 +86,8 @@ terraform apply
 Key/value pairs for a terraform backend configuration can be specified via the init command line. To specify a single key/value pair, use the `-backend-config="KEY=VALUE"` option when running terraform init.
 
 ```bash
-terraform init -backend-config="path=state_data/terraform.prod.tfstate" -migrate-state
+terraform init -backend-config="path=state_data/terraform.prod.tfstate" -migrate-state, instead you will use:
+terraform init -backend-config="state_configuration/dev_local.hcl" -migrate-state
 terraform plan
 terraform apply
 ```
